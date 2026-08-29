@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.H.I.N.E✨ | South Asian Luxury Boutique | South Riding, VA</title>
+  <meta name="description" content="S.H.I.N.E✨. South Asian luxury boutique in South Riding, VA offering 1 Gram Gold Jewelry, North & South Indian Apparel, Kids Dresses, Accessories, Saree Prepleating, Custom Alterations & Return Gifts.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="website_styles.css?v=aurora_theme_v3">
+</head>
+<body>
+
+  <!-- Top Announcement Bar (Deep Burgundy #3c0d18) -->
+  <div class="announcement-bar">
+    <div class="container announcement-container">
+      <div class="announcement-item">
+        <i class="fa-solid fa-phone text-gold"></i>
+        <span><a href="tel:7038178344" style="color: var(--text-cream);">(703) 817-8344</a></span>
+      </div>
+
+      <div class="announcement-item" style="gap: 16px; font-size: 0.8rem;">
+        <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" style="color: var(--text-cream); display: flex; align-items: center; gap: 4px;" title="Store Location on Google Maps"><i class="fa-solid fa-location-dot text-gold"></i> Location</a>
+        <a href="https://www.instagram.com/s.h.i.n.e_4u/?hl=en" target="_blank" style="color: var(--text-cream); display: flex; align-items: center; gap: 4px;" title="Instagram"><i class="fa-brands fa-instagram text-gold"></i> Instagram</a>
+        <a href="https://wa.me/17038178344?text=Hi!%20I'd%20like%20to%20inquire%20about%20S.H.I.N.E✨%20Boutique%20services." target="_blank" style="color: var(--text-cream); display: flex; align-items: center; gap: 4px;" title="WhatsApp Chat"><i class="fa-brands fa-whatsapp text-gold"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar (Pure White Luxury Header) -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="website.html" class="brand">
+        <img src="assets/shine_logo.jpg" alt="S.H.I.N.E✨ Logo" class="brand-logo-img">
+        <div style="white-space: nowrap;">
+          <span class="brand-title">S.H.I.N.E✨</span>
+          <span class="brand-sub" style="white-space: nowrap; font-size: 0.58rem; letter-spacing: 0.8px; display: block;">JEWELRY • APPAREL • KIDS • ACCESSORIES</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">HOME</a>
+        <a href="#collections" class="nav-link" onclick="setFilter('jewelry')">JEWELRY</a>
+        <a href="#collections" class="nav-link" onclick="setFilter('apparel')">WOMEN</a>
+        <a href="#collections" class="nav-link" onclick="setFilter('men')">MEN</a>
+        <a href="#collections" class="nav-link" onclick="setFilter('kids')">KIDS</a>
+        <a href="#collections" class="nav-link" onclick="setFilter('festival')">✨ FESTIVAL</a>
+        <a href="#collections" class="nav-link" onclick="setFilter('accessories')">ACCESSORIES</a>
+        <a href="#collections" class="nav-link" onclick="setFilter('gifts')">RETURN GIFTS</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </div>
+
+      <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
+        <a href="https://wa.me/17038178344?text=Hi!%20I'd%20like%20to%20inquire%20about%20S.H.I.N.E✨%20Boutique%20services." target="_blank" class="btn btn-whatsapp btn-sm">
+          <i class="fa-brands fa-whatsapp"></i> WHATSAPP US
+        </a>
+        <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" class="btn btn-burgundy btn-sm">
+          <i class="fa-solid fa-store"></i> VISIT STORE
+        </a>
+        <button class="mobile-nav-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Mobile Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer (Hidden on Desktop >= 768px) -->
+    <div id="mobile-menu-drawer" class="mobile-menu-drawer">
+      <a href="#home" class="mobile-drawer-link" onclick="closeMobileMenu()">HOME</a>
+      <a href="#collections" class="mobile-drawer-link" onclick="setFilter('jewelry'); closeMobileMenu();">JEWELRY</a>
+      <a href="#collections" class="mobile-drawer-link" onclick="setFilter('apparel'); closeMobileMenu();">WOMEN</a>
+      <a href="#collections" class="mobile-drawer-link" onclick="setFilter('men'); closeMobileMenu();">MEN</a>
+      <a href="#collections" class="mobile-drawer-link" onclick="setFilter('kids'); closeMobileMenu();">KIDS WEAR</a>
+      <a href="#collections" class="mobile-drawer-link" onclick="setFilter('festival'); closeMobileMenu();">✨ FESTIVAL COLLECTION</a>
+      <a href="#collections" class="mobile-drawer-link" onclick="setFilter('accessories'); closeMobileMenu();">ACCESSORIES</a>
+      <a href="#collections" class="mobile-drawer-link" onclick="setFilter('gifts'); closeMobileMenu();">RETURN GIFTS</a>
+      <a href="#contact" class="mobile-drawer-link" onclick="closeMobileMenu()">CONTACT</a>
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed rgba(200, 157, 83, 0.3);">
+        <a href="https://wa.me/17038178344?text=Hi!%20I'd%20like%20to%20inquire%20about%20S.H.I.N.E✨%20Boutique%20services." target="_blank" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">
+          <i class="fa-brands fa-whatsapp"></i> WHATSAPP US
+        </a>
+        <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" class="btn btn-burgundy" style="width: 100%; justify-content: center;">
+          <i class="fa-solid fa-store"></i> VISIT STORE
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner Section (Single Hero with Scoped Right-Side Image Slideshow) -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Single Stationary Left Hero Content -->
+        <div class="hero-content">
+          <!-- Prominent Brand Name Spotlight Pill -->
+          <div style="margin-bottom: 12px; display: inline-flex; align-items: center; gap: 10px; background: rgba(60, 13, 24, 0.04); border: 1.5px solid var(--gold-accent); padding: 8px 20px; border-radius: 50px; box-shadow: 0 4px 14px rgba(200, 157, 83, 0.18);">
+            <img src="assets/shine_logo.jpg" alt="S.H.I.N.E✨ Logo" style="width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--gold-accent); background: #000; object-fit: contain;">
+            <span style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: var(--burgundy-primary); letter-spacing: 1.8px;">S.H.I.N.E✨ BOUTIQUE</span>
+          </div>
+
+          <div style="margin-bottom: 8px;">
+            <span class="badge badge-gold" style="font-size: 0.76rem; padding: 6px 14px; letter-spacing: 1.2px;">✨ FESTIVAL & WEDDING COLLECTION AVAILABLE</span>
+          </div>
+          <div class="subhead-gold-aurora">
+            JEWELRY • NORTH & SOUTH ETHNIC • KIDS • RETURN GIFTS
+          </div>
+
+          <h1 class="hero-title-aurora">
+            Welcome to <span style="color: var(--gold-accent); font-weight: 800;">S.H.I.N.E✨</span><br>
+            South Asian Luxury Boutique
+          </h1>
+          
+          <div class="hero-diamond-divider">
+            <span></span>
+            <i class="fa-solid fa-clover"></i>
+            <span></span>
+          </div>
+
+          <p class="hero-subtitle-aurora">
+            Discover 1g Gold jewelry, North & South Indian festive apparel, kids dresses, accessories, and thoughtful return gifts in South Riding, VA.
+          </p>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="#collections" class="btn btn-burgundy btn-lg" style="border-radius: 4px; padding: 14px 34px; font-size: 0.82rem; letter-spacing: 1.5px;">
+              EXPLORE COLLECTIONS &rarr;
+            </a>
+            <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" class="btn btn-outline-burgundy btn-lg" style="border-radius: 4px; padding: 14px 34px; font-size: 0.82rem; letter-spacing: 1.5px;">
+              VISIT OUR STORE
+            </a>
+          </div>
+        </div>
+
+        <!-- Scoped Right-Side Image Slideshow Container -->
+        <div class="hero-visual" onmouseenter="pauseHeroImageSlider()" onmouseleave="resumeHeroImageSlider()">
+          <!-- Navigation Arrows Inside Image Container -->
+          <button class="hero-carousel-arrow left" onclick="prevHeroImage()" title="Previous Image">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="hero-carousel-arrow right" onclick="nextHeroImage()" title="Next Image">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Image 1: Jewelry (Default Start Slide) -->
+          <div class="hero-img-slide active" data-img-slide="0">
+            <img src="assets/shine_model_hero.jpg" alt="1 Gram Gold & Heritage Jewelry">
+          </div>
+          <!-- Image 2: North Indian Couple -->
+          <div class="hero-img-slide" data-img-slide="1">
+            <img src="assets/north_indian_couple.jpg" alt="North Indian Wedding & Festive Couple Wear">
+          </div>
+          <!-- Image 3: Kids Dresses -->
+          <div class="hero-img-slide" data-img-slide="2">
+            <img src="assets/shine_kids_wear.jpg?v=3" alt="Kids Ethnic Lehengas & Half Sarees">
+          </div>
+          <!-- Image 4: Women's Apparel -->
+          <div class="hero-img-slide" data-img-slide="3">
+            <img src="assets/shine_apparel_hero.jpg?v=3" alt="Traditional Sarees and Lehengas">
+          </div>
+          <!-- Image 5: Men's Wear -->
+          <div class="hero-img-slide" data-img-slide="4">
+            <img src="assets/shine_men_wear.jpg" alt="Men's Wedding Sherwani & Kurta Set">
+          </div>
+          <!-- Image 6: Accessories -->
+          <div class="hero-img-slide" data-img-slide="5">
+            <img src="assets/shine_accessories_card.jpg" alt="Handcrafted Potli Bags & Accessories">
+          </div>
+          <!-- Image 7: Return Gifts -->
+          <div class="hero-img-slide" data-img-slide="6">
+            <img src="assets/card_return_gifts_combined.jpg" alt="Thoughtful Event Return Gifts">
+          </div>
+
+          <!-- Slideshow Dots -->
+          <div class="hero-img-dots-bar">
+            <span class="hero-img-dot active" onclick="goToHeroImage(0)"></span>
+            <span class="hero-img-dot" onclick="goToHeroImage(1)"></span>
+            <span class="hero-img-dot" onclick="goToHeroImage(2)"></span>
+            <span class="hero-img-dot" onclick="goToHeroImage(3)"></span>
+            <span class="hero-img-dot" onclick="goToHeroImage(4)"></span>
+            <span class="hero-img-dot" onclick="goToHeroImage(5)"></span>
+            <span class="hero-img-dot" onclick="goToHeroImage(6)"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collection Cards Grid -->
+      <div class="hero-pillars-container">
+        <h3 class="pillars-header-title">EXPLORE OUR COLLECTIONS</h3>
+        <div class="hero-pillars-grid">
+          <!-- Card 1: JEWELRY -->
+          <div class="pillar-hero-card" onclick="setFilter('jewelry')">
+            <div class="pillar-card-img-wrap">
+              <span class="badge badge-gold pillar-card-badge">JEWELRY</span>
+              <img src="assets/shine_model_hero.jpg" alt="1 Gram Gold & Heritage Jewelry" class="pillar-card-img">
+            </div>
+            <div class="pillar-card-info">
+              <h4 class="pillar-card-title">JEWELRY</h4>
+              <p class="pillar-card-sub">1 Gram Gold • Bridal • Temple</p>
+              <span class="pillar-card-btn">EXPLORE &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Card 2: WOMEN -->
+          <div class="pillar-hero-card" onclick="setFilter('apparel')">
+            <div class="pillar-card-img-wrap">
+              <span class="badge badge-burgundy pillar-card-badge">WOMEN</span>
+              <img src="assets/north_indian_couple.jpg" alt="North Indian Festive & Bridal Couple" class="pillar-card-img">
+            </div>
+            <div class="pillar-card-info">
+              <h4 class="pillar-card-title">WOMEN</h4>
+              <p class="pillar-card-sub">Lehengas • Sarees • Festive Sets</p>
+              <span class="pillar-card-btn">EXPLORE &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Card 3: KIDS DRESSES -->
+          <div class="pillar-hero-card" onclick="setFilter('kids')">
+            <div class="pillar-card-img-wrap">
+              <span class="badge badge-gold pillar-card-badge">KIDS WEAR</span>
+              <img src="assets/shine_kids_wear.jpg?v=3" alt="Kids Ethnic Lehengas & Half Sarees" class="pillar-card-img">
+            </div>
+            <div class="pillar-card-info">
+              <h4 class="pillar-card-title">KIDS DRESSES</h4>
+              <p class="pillar-card-sub">Pattu Langa • Lehengas • Frocks</p>
+              <span class="pillar-card-btn">EXPLORE &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Card 4: MEN -->
+          <div class="pillar-hero-card" onclick="setFilter('men')">
+            <div class="pillar-card-img-wrap">
+              <span class="badge badge-burgundy pillar-card-badge">MEN</span>
+              <img src="assets/shine_men_wear.jpg" alt="Kurtas & Festive Wear for Men" class="pillar-card-img">
+            </div>
+            <div class="pillar-card-info">
+              <h4 class="pillar-card-title">MEN</h4>
+              <p class="pillar-card-sub">Kurtas • Wedding • Festive Wear</p>
+              <span class="pillar-card-btn">EXPLORE &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Card 5: ACCESSORIES -->
+          <div class="pillar-hero-card" onclick="setFilter('accessories')">
+            <div class="pillar-card-img-wrap">
+              <span class="badge badge-burgundy pillar-card-badge">ACCESSORIES</span>
+              <img src="assets/shine_accessories_card.jpg" alt="Traditional & Fashion Accessories" class="pillar-card-img">
+            </div>
+            <div class="pillar-card-info">
+              <h4 class="pillar-card-title">ACCESSORIES</h4>
+              <p class="pillar-card-sub">Traditional • Fashion • Wedding</p>
+              <span class="pillar-card-btn">EXPLORE &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Card 6: RETURN GIFTS -->
+          <div class="pillar-hero-card" onclick="setFilter('gifts')">
+            <div class="pillar-card-img-wrap">
+              <span class="badge badge-gold pillar-card-badge">RETURN GIFTS</span>
+              <img src="assets/card_return_gifts_combined.jpg" alt="Wedding & Festival Return Gifts" class="pillar-card-img">
+            </div>
+            <div class="pillar-card-info">
+              <h4 class="pillar-card-title">RETURN GIFTS</h4>
+              <p class="pillar-card-sub">Wedding • Festivals • Custom Gifts</p>
+              <span class="pillar-card-btn">EXPLORE &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Trust Icons Ribbon Bar (Broad Business Pillars) -->
+  <section class="trust-bar-section">
+    <div class="container trust-bar-grid">
+      <div class="trust-bar-item">
+        <i class="fa-solid fa-gem trust-bar-icon"></i>
+        <div>
+          <div class="trust-bar-title">CURATED INDIAN COLLECTIONS</div>
+          <div class="trust-bar-sub">Jewelry • Apparel • Accessories</div>
+        </div>
+      </div>
+
+      <div class="trust-bar-item">
+        <i class="fa-solid fa-crown trust-bar-icon"></i>
+        <div>
+          <div class="trust-bar-title">BRIDAL & FESTIVE STYLES</div>
+          <div class="trust-bar-sub">For weddings & celebrations</div>
+        </div>
+      </div>
+
+      <div class="trust-bar-item">
+        <i class="fa-solid fa-hand-holding-heart trust-bar-icon"></i>
+        <div>
+          <div class="trust-bar-title">BOUTIQUE EXPERIENCE</div>
+          <div class="trust-bar-sub">Personalized in-store assistance</div>
+        </div>
+      </div>
+
+      <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" class="trust-bar-item" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <i class="fa-solid fa-location-dot trust-bar-icon"></i>
+        <div>
+          <div class="trust-bar-title">SOUTH RIDING, VA</div>
+          <div class="trust-bar-sub">Visit us in-store (Google Maps)</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- "SHOP BY OCCASION" Curated Section -->
+  <section id="categories" class="category-section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="subhead-gold">CURATED SELECTIONS</span>
+        <h2 class="section-title-lg">Shop by Occasion</h2>
+      </div>
+
+      <div class="aurora-category-grid">
+        <!-- Occasion 1: WEDDINGS -->
+        <div class="aurora-cat-card" onclick="setFilter('apparel')">
+          <div class="aurora-cat-img-wrap">
+            <img src="assets/shine_apparel_hero.jpg" alt="Weddings">
+          </div>
+          <h3 class="aurora-cat-title">WEDDINGS</h3>
+          <p class="aurora-cat-sub">Bridal Jewelry • Sarees • Lehengas • Men's Wedding Wear</p>
+          <span class="aurora-cat-link">EXPLORE COLLECTIONS &rarr;</span>
+        </div>
+
+        <!-- Occasion 2: FESTIVALS -->
+        <div class="aurora-cat-card" onclick="setFilter('jewelry')">
+          <div class="aurora-cat-img-wrap">
+            <img src="assets/shine_model_hero.jpg" alt="Festivals">
+          </div>
+          <h3 class="aurora-cat-title">FESTIVALS</h3>
+          <p class="aurora-cat-sub">Traditional Jewelry • Sarees • Kurtas</p>
+          <span class="aurora-cat-link">EXPLORE COLLECTIONS &rarr;</span>
+        </div>
+
+        <!-- Occasion 3: EVERYDAY ELEGANCE -->
+        <div class="aurora-cat-card" onclick="setFilter('accessories')">
+          <div class="aurora-cat-img-wrap">
+            <img src="assets/shine_accessories_card.jpg" alt="Everyday Elegance">
+          </div>
+          <h3 class="aurora-cat-title">EVERYDAY ELEGANCE</h3>
+          <p class="aurora-cat-sub">1 Gram Gold • Earrings • Accessories</p>
+          <span class="aurora-cat-link">EXPLORE COLLECTIONS &rarr;</span>
+        </div>
+
+        <!-- Occasion 4: GIFTING -->
+        <div class="aurora-cat-card" onclick="setFilter('gifts')">
+          <div class="aurora-cat-img-wrap">
+            <img src="assets/shine_return_gifts_card.jpg" alt="Gifting">
+          </div>
+          <h3 class="aurora-cat-title">GIFTING</h3>
+          <p class="aurora-cat-sub">Wedding • Baby Shower • Housewarming • Festivals</p>
+          <span class="aurora-cat-link">EXPLORE COLLECTIONS &rarr;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED COLLECTIONS Showcase Grid -->
+  <section id="collections" class="showcase-section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="subhead-gold">FEATURED COLLECTIONS</span>
+        <h2 class="section-title-lg">Explore Our Collection</h2>
+      </div>
+
+      <!-- Filter Pills -->
+      <div class="filter-bar">
+        <button class="filter-pill active" data-filter="jewelry">Jewelry</button>
+        <button class="filter-pill" data-filter="apparel">Women's Clothing</button>
+        <button class="filter-pill" data-filter="men">Men's Clothing</button>
+        <button class="filter-pill" data-filter="kids">Kids Wear</button>
+        <button class="filter-pill" data-filter="festival">✨ Festival Collection</button>
+        <button class="filter-pill" data-filter="accessories">Accessories</button>
+        <button class="filter-pill" data-filter="gifts">Return Gifts</button>
+      </div>
+
+      <!-- Catalog Category Info Header Bar -->
+      <div id="catalog-counter-bar" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 0 4px; font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">
+        <span id="catalog-count-text"><i class="fa-solid fa-gem text-gold" style="margin-right: 6px;"></i> Jewelry Collections</span>
+        <span style="font-size: 0.78rem; color: var(--gold-accent); font-weight: 700;"><i class="fa-solid fa-store" style="margin-right: 4px;"></i> In Stock at South Riding Boutique</span>
+      </div>
+
+      <!-- Expandable Subcategory Cards Grid -->
+      <div id="showcase-grid" class="subcat-grid">
+        <!-- Injected via website_app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Exclusive Offer Middle Banner (Deep Burgundy #3c0d18 Banner) -->
+  <section id="experience" class="middle-banner-section">
+    <div class="container">
+      <div class="burgundy-banner-card">
+        <img src="assets/north_indian_couple.jpg" alt="S.H.I.N.E✨ Boutique Exclusive Styling" class="burgundy-banner-img">
+        <div class="burgundy-banner-content">
+          <span class="badge badge-gold" style="margin-bottom: 12px;">BOUTIQUE EXPERIENCE</span>
+          <h2 class="burgundy-banner-title">Personalized Styling & Saree Prepleating</h2>
+          <p class="burgundy-banner-desc">
+            Visit our South Riding boutique for jewelry matching, traditional outfit fitting, custom alterations, and ready-to-wear saree prepleating.
+          </p>
+          <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-lg">
+            GET DIRECTIONS &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram / Visual Gallery Grid ("GET INSPIRED @s.h.i.n.e_4u") -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="subhead-gold">GET INSPIRED</span>
+        <h2 class="section-title-lg">@s.h.i.n.e_4u</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 6px;">Follow our official Instagram for new arrivals & boutique looks.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <a href="https://www.instagram.com/s.h.i.n.e_4u/?hl=en" target="_blank" class="gallery-item">
+          <img src="assets/shine_model_hero.jpg" alt="1 Gram Gold Jewelry" class="gallery-img">
+          <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+        </a>
+
+        <a href="https://www.instagram.com/s.h.i.n.e_4u/?hl=en" target="_blank" class="gallery-item">
+          <img src="assets/north_indian_couple.jpg" alt="North Indian Bridal & Festive Wear" class="gallery-img">
+          <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+        </a>
+
+        <a href="https://www.instagram.com/s.h.i.n.e_4u/?hl=en" target="_blank" class="gallery-item">
+          <img src="assets/shine_kids_wear.jpg?v=3" alt="Kids Ethnic Dresses" class="gallery-img">
+          <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+        </a>
+
+        <a href="https://www.instagram.com/s.h.i.n.e_4u/?hl=en" target="_blank" class="gallery-item">
+          <img src="assets/shine_return_gifts_card.jpg" alt="Custom Return Gifts" class="gallery-img">
+          <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+        </a>
+
+        <a href="https://www.instagram.com/s.h.i.n.e_4u/?hl=en" target="_blank" class="gallery-item">
+          <img src="assets/card_kanjeevaram_saree.jpg" alt="Silk Sarees" class="gallery-img">
+          <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+        </a>
+
+        <a href="https://www.instagram.com/s.h.i.n.e_4u/?hl=en" target="_blank" class="gallery-item">
+          <img src="assets/shine_jewelry_card.jpg" alt="Temple Jewelry" class="gallery-img">
+          <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Location & Contact Section -->
+  <section id="contact" class="category-section" style="background: var(--bg-card-cream);">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="subhead-gold">VISIT OUR BOUTIQUE</span>
+        <h2 class="section-title-lg">S.H.I.N.E✨ Boutique</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 6px;">43090 Peacock Market Plaza #190, South Riding, VA 20152</p>
+      </div>
+
+      <div class="hero-grid" style="background: #ffffff; padding: 10px; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle);">
+        <div style="padding: 30px;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--text-heading); margin-bottom: 14px;">Boutique Contact Info</h3>
+          <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.95rem; color: var(--text-body);">
+            <div><strong><i class="fa-solid fa-store text-gold"></i> Boutique Location:</strong> S.H.I.N.E✨ Boutique</div>
+            <div><strong><i class="fa-solid fa-location-dot text-gold"></i> Store Address:</strong> <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" class="text-burgundy" style="font-weight: 700; text-decoration: underline;">43090 Peacock Market Plaza #190, South Riding, VA 20152</a></div>
+            <div><strong><i class="fa-solid fa-phone text-gold"></i> Direct Line:</strong> <a href="tel:7038178344" class="text-burgundy" style="font-weight: 800;">(703) 817-8344</a></div>
+            <div><strong><i class="fa-solid fa-envelope text-gold"></i> Email Inquiry:</strong> <a href="mailto:shineattriveni@gmail.com" class="text-burgundy" style="font-weight: 700;">shineattriveni@gmail.com</a></div>
+            <div><strong><i class="fa-brands fa-instagram text-gold"></i> Instagram:</strong> <a href="https://www.instagram.com/s.h.i.n.e_4u/?hl=en" target="_blank" class="text-burgundy">@s.h.i.n.e_4u</a></div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px; background: var(--burgundy-primary); padding: 40px; border-radius: var(--radius-md); color: #ffffff;">
+          <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--gold-light);">Direct Actions</h4>
+          <a href="tel:7038178344" class="btn btn-gold btn-lg">
+            <i class="fa-solid fa-phone"></i> CALL (703) 817-8344
+          </a>
+          <a href="https://wa.me/17038178344?text=Hi!%20I'd%20like%20to%20inquire%20about%20S.H.I.N.E✨%20Boutique%20services." target="_blank" class="btn btn-whatsapp btn-lg">
+            <i class="fa-brands fa-whatsapp"></i> WHATSAPP CHAT
+          </a>
+          <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" class="btn btn-outline-burgundy btn-lg" style="border-color: var(--gold-accent); color: var(--gold-light);">
+            <i class="fa-solid fa-map-pin text-gold"></i> GET MAP DIRECTIONS
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail Modal -->
+  <div id="quickview-modal" class="modal-overlay">
+    <div class="modal-box">
+      <button onclick="closeDetailModal()" class="modal-close-btn">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="modal-grid">
+        <div class="modal-img-wrap">
+          <img id="modal-img" src="" alt="" class="modal-img">
+        </div>
+        <div class="modal-details">
+          <div>
+            <span id="modal-category" class="product-category-text"></span>
+            <h2 id="modal-title" class="product-name" style="font-size: 1.4rem; margin-top: 4px;"></h2>
+
+            <p id="modal-desc" style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin: 14px 0;"></p>
+
+            <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px;">
+              <div><i class="fa-solid fa-gem text-gold"></i> Craftsmanship: <strong id="modal-finish" style="color: var(--text-heading);"></strong></div>
+              <div><i class="fa-solid fa-store text-gold"></i> Availability: <strong id="modal-availability" style="color: var(--text-heading);"></strong></div>
+              <div><i class="fa-solid fa-location-dot text-gold"></i> Store Location: <strong>43090 Peacock Market Plaza #190, South Riding, VA</strong></div>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a id="modal-wa-btn" href="#" target="_blank" class="btn btn-whatsapp btn-lg">
+              <i class="fa-brands fa-whatsapp"></i> INQUIRE ON WHATSAPP
+            </a>
+            <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" class="btn btn-burgundy">
+              <i class="fa-solid fa-location-dot"></i> GET STORE DIRECTIONS
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Store Visit Request Modal -->
+  <div id="appointment-modal" class="modal-overlay">
+    <div class="modal-box" style="max-width: 500px;">
+      <button onclick="closeAppointmentModal()" class="modal-close-btn">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div style="padding: 36px;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--text-heading); margin-bottom: 4px;">
+          Plan Your Boutique Visit & Fitting
+        </h2>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 20px;">
+          S.H.I.N.E✨ Boutique
+        </p>
+
+        <form id="appointment-form" class="vip-form">
+          <div class="form-group">
+            <label for="appt-name">Your Full Name</label>
+            <input type="text" id="appt-name" class="form-control" placeholder="e.g. Ananya Sharma" required>
+          </div>
+
+          <div class="form-group">
+            <label for="appt-phone">Phone Number / WhatsApp</label>
+            <input type="tel" id="appt-phone" class="form-control" placeholder="e.g. (703) 817-8344" required>
+          </div>
+
+          <div class="form-group">
+            <label for="appt-service">Service Requested</label>
+            <select id="appt-service" class="form-control" style="cursor: pointer;">
+              <option value="General Store Visit & Trial">General Store Visit & Trial</option>
+              <option value="Designer Apparel & Lehenga Fitting">Designer Apparel & Lehenga Fitting</option>
+              <option value="1g Gold Jewelry Styling">1g Gold Jewelry Styling</option>
+              <option value="Saree Prepleating Service">Saree Prepleating Service</option>
+              <option value="Custom Alterations Fitting">Custom Alteration Fitting</option>
+              <option value="Custom Return Gifts Inquiry">Custom Return Gifts Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="appt-date">Preferred Visit Date</label>
+            <input type="date" id="appt-date" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-burgundy btn-lg" style="width: 100%; margin-top: 10px;">
+            SUBMIT VISIT REQUEST &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp VIP Widget -->
+  <a href="https://wa.me/17038178344?text=Hi!%20I'd%20like%20to%20inquire%20about%20S.H.I.N.E✨%20Boutique%20services." target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i>
+    <span>(703) 817-8344</span>
+  </a>
+
+  <!-- Deep Burgundy Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">
+            <img src="assets/shine_logo.jpg" alt="S.H.I.N.E✨ Logo" class="brand-logo-img">
+            <div>
+              <span class="brand-title" style="color: var(--text-cream);">S.H.I.N.E✨</span>
+            </div>
+          </div>
+          <p class="footer-brand-text">
+            <strong>S.H.I.N.E✨ Boutique</strong><br>
+            Jewelry • North & South Ethnic • Kids • Accessories<br>
+            43090 Peacock Market Plaza #190, South Riding, VA 20152
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">BOUTIQUE OFFERINGS</h4>
+          <div class="footer-links">
+            <a href="#collections" class="footer-link" onclick="setFilter('jewelry')">1g Gold Jewelry</a>
+            <a href="#collections" class="footer-link" onclick="setFilter('apparel')">Designer Clothing</a>
+            <a href="#collections" class="footer-link" onclick="setFilter('kids')">Kids Ethnic Wear</a>
+            <a href="#collections" class="footer-link" onclick="setFilter('festival')">✨ Festival Collection</a>
+            <a href="#experience" class="footer-link">Saree Prepleating</a>
+            <a href="#experience" class="footer-link">Custom Alterations</a>
+            <a href="#collections" class="footer-link" onclick="setFilter('gifts')">Return Gifts</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">STORE & CONTACT</h4>
+          <div class="footer-links" style="line-height: 1.7;">
+            <div><i class="fa-solid fa-store text-gold"></i> S.H.I.N.E✨ Boutique</div>
+            <div><i class="fa-solid fa-phone text-gold"></i> (703) 817-8344</div>
+            <div><a href="mailto:shineattriveni@gmail.com" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-envelope text-gold"></i> shineattriveni@gmail.com</a></div>
+            <div><a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-location-dot text-gold"></i> South Riding, VA 20152</a></div>
+            <div><a href="https://www.instagram.com/s.h.i.n.e_4u/?hl=en" target="_blank" style="color: inherit; text-decoration: none;"><i class="fa-brands fa-instagram text-gold"></i> @s.h.i.n.e_4u</a></div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">VISIT OUR BOUTIQUE</h4>
+          <p style="color: rgba(250, 247, 242, 0.8); font-size: 0.82rem; margin-bottom: 14px; line-height: 1.6;">
+            Visit our physical store in South Riding for jewelry matching, outfit fittings & custom alterations.
+          </p>
+          <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 700; letter-spacing: 0.5px; border-radius: 4px; padding: 10px 18px;">
+            <i class="fa-solid fa-map-location-dot"></i> GET DIRECTIONS
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 S.H.I.N.E✨ Boutique. All rights reserved. South Asian Luxury Boutique in South Riding, VA.
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="website_app.js"></script>
+</body>
+</html>
