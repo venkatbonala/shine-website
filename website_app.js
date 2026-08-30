@@ -454,7 +454,7 @@ function toggleSubcategory(index) {
 }
 
 function inquireSubcategoryOnWhatsApp(subcategoryName, categoryTitle) {
-  const message = encodeURIComponent(`Hi! I'm interested in "${subcategoryName}" under ${categoryTitle} at S.H.I.N.E✨ Boutique. Can you share available options or schedule an in-store trial?`);
+  const message = encodeURIComponent(`Hi! I'm interested in "${subcategoryName}" under ${categoryTitle} at S.H.I.N.E✨ Studio. Can you share available options or schedule an in-store trial?`);
   window.open(`https://wa.me/${STORE_PHONE}?text=${message}`, '_blank');
 }
 
@@ -565,11 +565,11 @@ function openDetailModal(itemId) {
   document.getElementById('modal-category').textContent = item.categoryName;
   document.getElementById('modal-desc').textContent = item.description;
   document.getElementById('modal-finish').textContent = item.finish || '';
-  document.getElementById('modal-availability').textContent = item.availability || 'In Stock at Boutique';
+  document.getElementById('modal-availability').textContent = item.availability || 'In Stock at Studio';
   
   // Set WhatsApp Inquiry Link
   const waBtn = document.getElementById('modal-wa-btn');
-  const waMessage = encodeURIComponent(`Hi! I'm inquiring about "${item.name}" from S.H.I.N.E✨ Boutique. Can you provide details on availability or scheduling an in-store trial?`);
+  const waMessage = encodeURIComponent(`Hi! I'm inquiring about "${item.name}" from S.H.I.N.E✨ Studio. Can you provide details on availability or scheduling an in-store trial?`);
   waBtn.href = `https://wa.me/${STORE_PHONE}?text=${waMessage}`;
 
   modal.classList.add('active');
@@ -584,7 +584,7 @@ function inquireOnWhatsApp(itemId) {
   const item = findItemById(itemId);
   if (!item) return;
 
-  const message = encodeURIComponent(`Hi! I'm interested in "${item.name}" at S.H.I.N.E✨ Boutique. Please let me know more details!`);
+  const message = encodeURIComponent(`Hi! I'm interested in "${item.name}" at S.H.I.N.E✨ Studio. Please let me know more details!`);
   window.open(`https://wa.me/${STORE_PHONE}?text=${message}`, '_blank');
 }
 
@@ -606,7 +606,7 @@ function initAppointmentModal() {
     closeAppointmentModal();
 
     // Trigger WhatsApp visit notification
-    const waText = encodeURIComponent(`Hi! My name is ${name} (${phone}). I would like to schedule a store visit at S.H.I.N.E✨ Boutique for: ${service} on ${date}. Please confirm availability!`);
+    const waText = encodeURIComponent(`Hi! My name is ${name} (${phone}). I would like to schedule a store visit at S.H.I.N.E✨ Studio for: ${service} on ${date}. Please confirm availability!`);
     window.open(`https://wa.me/${STORE_PHONE}?text=${waText}`, '_blank');
 
     form.reset();
