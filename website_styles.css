@@ -1694,30 +1694,109 @@ img {
 
   /* 3. Mobile Hero Section & Slide Image Positioning */
   .hero-card-frame {
-    padding: 24px 20px !important;
-    border-radius: 16px !important;
+    padding: 20px 16px !important;
+    border-radius: 18px !important;
   }
 
   .hero-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-
-  .hero-title-aurora {
-    font-size: 2.1rem !important;
-    line-height: 1.18 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
   }
 
   .hero-content {
-    text-align: left;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: center !important;
+    text-align: center !important;
   }
 
+  .hero-header-block {
+    order: 1;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-pre-header {
+    font-size: 0.68rem !important;
+    letter-spacing: 3px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .hero-title-aurora {
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 6px !important;
+    text-align: center;
+  }
+
+  .hero-tagline-italic {
+    font-size: 1.05rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0 !important;
+    color: #6E5C4E !important;
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* Image appears IMMEDIATELY after headline on mobile! */
   .hero-visual {
-    height: 380px !important;
-    max-height: 52vh !important;
-    border-radius: var(--radius-md) !important;
-    box-shadow: 0 8px 24px rgba(60, 13, 24, 0.12) !important;
-    overflow: hidden;
+    order: 2;
+    width: 100% !important;
+    height: 330px !important;
+    max-height: 48vh !important;
+    border-radius: 14px !important;
+    margin: 4px 0 10px 0 !important;
+  }
+
+  .top-divider {
+    display: none !important; /* Hide duplicate top divider on mobile */
+  }
+
+  .bottom-divider {
+    order: 3;
+    margin: 10px auto !important;
+    max-width: 260px !important;
+  }
+
+  .hero-signature-block {
+    order: 4;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 12px !important;
+    padding-left: 0 !important;
+  }
+
+  .signature-top {
+    font-size: 0.88rem !important;
+    letter-spacing: 2px !important;
+  }
+
+  .signature-bottom {
+    font-size: 1.55rem !important; /* Clean, perfectly scaled for phone screens */
+    margin-top: 2px !important;
+  }
+
+  .hero-actions-block {
+    order: 5;
+    display: flex !important;
+    flex-direction: row !important; /* Side-by-side compact buttons on mobile */
+    gap: 10px !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .btn-hero-compact, .btn-hero-outline-compact {
+    flex: 1 !important;
+    padding: 11px 12px !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 1px !important;
+    justify-content: center !important;
+    border-radius: 6px !important;
+    white-space: nowrap !important;
   }
 
   .hero-carousel-arrow {
