@@ -19,30 +19,25 @@
 </head>
 <body>
 
-  <!-- Top Announcement Bar (Deep Burgundy #3c0d18) -->
-  <div class="announcement-bar">
-    <div class="container announcement-container">
-      <div class="announcement-item">
-        <i class="fa-solid fa-phone text-gold"></i>
-        <span><a href="tel:7038178344" style="color: var(--text-cream);">(703) 817-8344</a></span>
-      </div>
-
-      <div class="announcement-item" style="gap: 16px; font-size: 0.8rem;">
-        <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" style="color: var(--text-cream); display: flex; align-items: center; gap: 4px;" title="Store Location on Google Maps"><i class="fa-solid fa-location-dot text-gold"></i> Location</a>
-        <a href="https://www.instagram.com/s.h.i.n.e_4u/?hl=en" target="_blank" style="color: var(--text-cream); display: flex; align-items: center; gap: 4px;" title="Instagram"><i class="fa-brands fa-instagram text-gold"></i> Instagram</a>
-        <a href="https://wa.me/17038178344?text=Hi!%20I'd%20like%20to%20inquire%20about%20S.H.I.N.E✨%20Boutique%20services." target="_blank" style="color: var(--text-cream); display: flex; align-items: center; gap: 4px;" title="WhatsApp Chat"><i class="fa-brands fa-whatsapp text-gold"></i> WhatsApp</a>
-      </div>
+  <!-- Top Announcement Bar (Deep Burgundy #2C0E14) -->
+  <div class="announcement-bar" style="background: #2C0E14; padding: 10px 0; border-bottom: 1px solid rgba(200, 157, 83, 0.3);">
+    <div class="container" style="text-align: center;">
+      <span style="font-family: var(--font-heading); font-size: 0.82rem; font-weight: 700; color: #FAF6EE; letter-spacing: 2px; text-transform: uppercase;">
+        ✨ FESTIVAL & WEDDING COLLECTION AVAILABLE ✨
+      </span>
     </div>
   </div>
 
-  <!-- Navigation Bar (Pure White Luxury Header) -->
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="website.html" class="brand">
-        <img src="assets/shine_logo.jpg" alt="S.H.I.N.E✨ Logo" class="brand-logo-img">
-        <div style="white-space: nowrap;">
-          <span class="brand-title">S.H.I.N.E✨</span>
-          <span class="brand-sub" style="white-space: nowrap; font-size: 0.58rem; letter-spacing: 0.8px; display: block;">JEWELRY • APPAREL • KIDS • ACCESSORIES</span>
+  <!-- Navigation Bar (Luxury Off-White Header) -->
+  <nav class="navbar" style="background: #FAF6EE; padding: 14px 0; border-bottom: 1px solid rgba(200, 157, 83, 0.2);">
+    <div class="container nav-container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="website.html" class="brand" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
+        <img src="assets/shine_logo.jpg" alt="S.H.I.N.E✨ Logo" class="brand-logo-img" style="width: 58px; height: 58px; border-radius: 8px; border: 1.5px solid var(--gold-accent); background: #000; object-fit: contain; padding: 2px;">
+        <div>
+          <span class="brand-title" style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: #2C0E14; letter-spacing: 2px; display: block; line-height: 1.1;">S.H.I.N.E.✨</span>
+          <span style="font-size: 0.54rem; font-weight: 700; color: #7A695B; letter-spacing: 1px; text-transform: uppercase; display: block; margin-top: 2px; line-height: 1.3;">
+            JEWELRY • APPAREL • KIDS<br>ACCESSORIES • GIFTS
+          </span>
         </div>
       </a>
 
@@ -59,19 +54,13 @@
       </div>
 
       <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
-        <a href="https://wa.me/17038178344?text=Hi!%20I'd%20like%20to%20inquire%20about%20S.H.I.N.E✨%20Boutique%20services." target="_blank" class="btn btn-whatsapp btn-sm">
-          <i class="fa-brands fa-whatsapp"></i> WHATSAPP US
-        </a>
-        <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" class="btn btn-burgundy btn-sm">
-          <i class="fa-solid fa-store"></i> VISIT STORE
-        </a>
-        <button class="mobile-nav-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Mobile Navigation Menu">
+        <button class="mobile-nav-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Mobile Navigation Menu" style="background: transparent; border: none; font-size: 1.5rem; color: #2C0E14; cursor: pointer; padding: 6px;">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Navigation Drawer (Hidden on Desktop >= 768px) -->
+    <!-- Mobile Navigation Drawer -->
     <div id="mobile-menu-drawer" class="mobile-menu-drawer">
       <a href="#home" class="mobile-drawer-link" onclick="closeMobileMenu()">HOME</a>
       <a href="#collections" class="mobile-drawer-link" onclick="setFilter('jewelry'); closeMobileMenu();">JEWELRY</a>
@@ -93,46 +82,44 @@
     </div>
   </nav>
 
-  <!-- Hero Banner Section (Single Hero with Scoped Right-Side Image Slideshow) -->
-  <header id="home" class="hero">
+  <!-- Hero Banner Section (Rectangular Photo Card Layout - Exact Mockup Alignment) -->
+  <header id="home" class="hero" style="background: #FAF6EE; padding: 24px 0 40px 0;">
     <div class="container">
-      <div class="hero-grid">
-        <!-- Single Stationary Left Hero Content -->
-        <div class="hero-content">
-          <!-- Prominent Brand Name Spotlight Pill -->
-          <div style="margin-bottom: 12px; display: inline-flex; align-items: center; gap: 10px; background: rgba(60, 13, 24, 0.04); border: 1.5px solid var(--gold-accent); padding: 8px 20px; border-radius: 50px; box-shadow: 0 4px 14px rgba(200, 157, 83, 0.18);">
-            <img src="assets/shine_logo.jpg" alt="S.H.I.N.E✨ Logo" style="width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--gold-accent); background: #000; object-fit: contain;">
-            <span style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 800; color: var(--burgundy-primary); letter-spacing: 1.8px;">S.H.I.N.E✨ STUDIO</span>
-          </div>
-
-          <div style="margin-bottom: 8px;">
-            <span class="badge badge-gold" style="font-size: 0.76rem; padding: 6px 14px; letter-spacing: 1.2px;">✨ FESTIVAL & WEDDING COLLECTION AVAILABLE</span>
-          </div>
-
-          <h1 class="hero-title-aurora">
-            Welcome to <span style="color: var(--gold-accent); font-weight: 800;">S.H.I.N.E✨</span><br>
-            Tradition, Styled With Luxury
-          </h1>
+      <div class="hero-card-frame" style="background: #FAF6EE; border-radius: 20px; border: 1px solid rgba(200, 157, 83, 0.25); box-shadow: 0 16px 45px rgba(44, 14, 20, 0.08); overflow: hidden; padding: 36px 40px;">
+        <div class="hero-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
           
-          <div class="hero-diamond-divider">
-            <span></span>
-            <i class="fa-solid fa-clover"></i>
-            <span></span>
-          </div>
+          <!-- Left Stationary Content Card -->
+          <div class="hero-content" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+            <span style="font-family: var(--font-heading); font-size: 0.76rem; font-weight: 800; color: #B58A46; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; display: block;">
+              WELCOME TO THE WORLD OF SHINE
+            </span>
 
-          <p class="hero-subtitle-aurora">
-            Discover 1g Gold jewelry, curated silk sarees, designer lehengas, kids dresses, accessories, and thoughtful return gifts in South Riding, VA.
-          </p>
+            <h1 class="hero-title-aurora" style="font-family: var(--font-heading); font-size: 2.8rem; font-weight: 700; color: #2C0E14; line-height: 1.15; margin-bottom: 18px; letter-spacing: -0.5px;">
+              Where Tradition<br>
+              Meets Modern<br>
+              <span style="color: #C89D53; font-style: italic; font-weight: 500;">Luxury✨</span>
+            </h1>
+            
+            <div class="hero-diamond-divider" style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px;">
+              <span style="width: 50px; height: 1px; background: #C89D53; opacity: 0.6;"></span>
+              <i class="fa-solid fa-clover" style="font-size: 0.65rem; color: #C89D53;"></i>
+              <span style="width: 50px; height: 1px; background: #C89D53; opacity: 0.6;"></span>
+            </div>
 
-          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <a href="#collections" class="btn btn-burgundy btn-lg" style="border-radius: 4px; padding: 14px 34px; font-size: 0.82rem; letter-spacing: 1.5px;">
-              EXPLORE COLLECTIONS &rarr;
-            </a>
-            <a href="https://maps.app.goo.gl/nNsDsziv38kxUxG36" target="_blank" rel="noopener noreferrer" class="btn btn-outline-burgundy btn-lg" style="border-radius: 4px; padding: 14px 34px; font-size: 0.82rem; letter-spacing: 1.5px;">
-              VISIT OUR STORE
-            </a>
+            <p style="font-family: var(--font-heading); font-size: 0.88rem; font-weight: 800; color: #2C0E14; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; line-height: 1.6;">
+              WEAR IT. CELEBRATE IT.<br>
+              SHINE IN IT.
+            </p>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap; width: 100%;">
+              <a href="#collections" class="btn btn-burgundy" style="background: #2C0E14; color: #ffffff; border-radius: 8px; padding: 14px 28px; font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(44, 14, 20, 0.25);">
+                EXPLORE COLLECTIONS &rarr;
+              </a>
+              <a href="#contact" class="btn" style="background: transparent; color: #2C0E14; border: 1.5px solid #2C0E14; border-radius: 8px; padding: 14px 28px; font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                CONTACT US &rarr;
+              </a>
+            </div>
           </div>
-        </div>
 
         <!-- Scoped Right-Side Image Slideshow Container -->
         <div class="hero-visual" onmouseenter="pauseHeroImageSlider()" onmouseleave="resumeHeroImageSlider()">
