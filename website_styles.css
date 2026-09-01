@@ -1727,12 +1727,19 @@ img {
   .hero-title-aurora {
     font-size: 2.5rem !important;
     line-height: 1.1 !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 4px !important;
+    text-align: center;
+  }
+
+  .hero-signature-line {
+    font-size: 1.45rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
     text-align: center;
   }
 
   .hero-tagline-italic {
-    font-size: 1.05rem !important;
+    font-size: 0.9rem !important;
     line-height: 1.35 !important;
     margin-bottom: 0 !important;
     color: #6E5C4E !important;
@@ -1742,7 +1749,7 @@ img {
     text-align: center;
   }
 
-  /* Image appears IMMEDIATELY after headline on mobile! */
+  /* Image appears IMMEDIATELY after headline block on mobile! */
   .hero-visual {
     order: 2;
     width: 100% !important;
@@ -1752,36 +1759,14 @@ img {
     margin: 4px 0 10px 0 !important;
   }
 
-  .top-divider {
-    display: none !important; /* Hide duplicate top divider on mobile */
-  }
-
-  .bottom-divider {
+  .hero-divider {
     order: 3;
     margin: 10px auto !important;
     max-width: 260px !important;
   }
 
-  .hero-signature-block {
-    order: 4;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 12px !important;
-    padding-left: 0 !important;
-  }
-
-  .signature-top {
-    font-size: 0.88rem !important;
-    letter-spacing: 2px !important;
-  }
-
-  .signature-bottom {
-    font-size: 1.55rem !important; /* Clean, perfectly scaled for phone screens */
-    margin-top: 2px !important;
-  }
-
   .hero-actions-block {
-    order: 5;
+    order: 4;
     display: flex !important;
     flex-direction: row !important; /* Side-by-side compact buttons on mobile */
     gap: 10px !important;
